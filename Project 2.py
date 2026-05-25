@@ -73,37 +73,31 @@ df["Quantity"].hist(bins=20, color="skyblue", edgecolor="black")
 plt.title("Quantity Distribution")
 plt.xlabel("Quantity")
 plt.ylabel("Frequency")
-plt.savefig("quantity_Hist.png")
 plt.close()
 
 # histogram for UnitPrice
 df["UnitPrice"].hist(bins=20, color="skyblue", edgecolor="black")
 plt.title("UnitPrice histogram")
-plt.savefig("unitprice_Hist.png")
 plt.close()
 
 # histogram for totalprice
 df["TotalPrice"].hist(bins=20, color="skyblue", edgecolor="black")
 plt.title("TotalPrice histogram")
-plt.savefig("totalprice_Hist.png")
 plt.close()
 
 # boxplot for UnitPrice
 sns.boxplot(x=df["UnitPrice"], color="lightgreen")
 plt.title("UnitPrice Boxplot")
-plt.savefig("unitprice_Box.png")
 plt.close()
 
 # boxplot for totalrpice
 sns.boxplot(x=df["TotalPrice"], color="lightgreen")
 plt.title("TotalPrice Boxplot")
-plt.savefig("TotalPrice_Box.png")
 plt.close()
 
 # boxplot for quantity
 sns.boxplot(x=df["Quantity"], color="lightgreen")
 plt.title("Quantity Boxplot")
-plt.savefig("Quantity_Box.png")
 plt.close()
 
 
@@ -115,7 +109,6 @@ correlation_quantity_and_UnitPrice = df[["Quantity","UnitPrice"]].corr()
 plt.figure(figsize=(8,6))
 sns.heatmap(correlation_quantity_and_UnitPrice, annot=True, cmap="coolwarm", fmt=".2f")
 plt.title("Correlation Heatmap")
-plt.savefig("correlation_quantity_and_UnitPrice.png")
 plt.close()
 
 # heatmap for correlation_Items_and_TotalPrice
@@ -123,5 +116,4 @@ plt.close()
 plt.figure(figsize=(8,6))
 sns.heatmap(correlation_Items_and_TotalPrice, annot=True, cmap="coolwarm", fmt=".2f")
 plt.title("Correlation Heatmap")
-plt.savefig("correlation_Items_and_TotalPrice.png")
 plt.close()
